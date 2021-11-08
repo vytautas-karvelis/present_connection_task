@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./scripts/record.js"></script>
+    <link rel="stylesheet" href="./styles/record.css">
+    <link rel="stylesheet" href="./styles/shared.css">
+</head>
+<body>
+    <div class="container">
+        <h1>New Record Form</h1>
+        <form>
+            <div class="form-controller">
+                <label for="userId">UserId</label>
+                <input type="text" id="userId" name="userId">
+                <p id="userIdM2"class="display-hidden">UserId cannot be empty</p>
+                <p id="userIdM1" class="display-hidden">UserId must be a number</p>
+            </div>
+            <div class="form-controller">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title">
+                <p id="titleM1" class="display-hidden">Title cannot be empty</p>
+            </div>
+            <div class="form-controller">
+                <label for="body">Body</label>
+                <textarea id="body" name="body" rows="4" cols="38"></textarea>
+                <p id="bodyM1" class="display-hidden">Body cannot be empty</p>
+            </div>
+            <div class="form-controller">
+                <input type="submit" value="Submit">
+            </div>
+            <p id="form-message"></p>
+        </form>
+
+        <div class="message-container">
+            <div class="message-container-unit-heading">
+                <p id="messageHeading" class="opacity-hidden title">New record added</p>
+            </div>
+            <div class="message-container-unit">
+                <span id="messageUserId" class="title">UserId:</span><p class="content" id="messageUserIdContent"></p>
+            </div>
+            <div class="message-container-unit">
+                <span id="messageTitle" class="title">Title:</span><p class="content" id="messageTitleContent"></p>
+            </div>
+            <div class="message-container-unit">
+                <span id="messageBody" class="title">Body:</span> <p class="content" id="messageBodyContent"></p>
+            </div>
+        </div>        
+    </div>
+</body>
+</html>
